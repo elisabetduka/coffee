@@ -23,11 +23,15 @@
             <li><%= link_to "Om företaget" %></li>
             <li><%= link_to "Kontakta oss" %></li>
             <li>
-              <form class="navbar-search span4 offset2">
+              <form class="navbar-search">
                 <input type="text" class="search-query" placeholder="Search">
               </form>
             </li>
-            <li class="pull-left"><%= link_to "Logga in" %></li>
+            <% if current_user %>
+              <li>Inloggad som: <%= @current_user.name %><%= link_to "Logga ut", signout_path, method: "delete" %></li>
+            <% else %>
+              <li class="pull-left"><%= link_to "Logga in", signin_path %></li>
+            <% end %>
           </ul>
         </div>
       </div>
