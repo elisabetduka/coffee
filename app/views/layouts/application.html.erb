@@ -20,6 +20,7 @@
           <ul class="nav">
             <li><%= link_to "Hem", root_path %></li>
             <li><%= link_to "Tänk på" %></li>
+            <li><%= link_to "Viktiga datum" %></li>
             <li><%= link_to "Om företaget" %></li>
             <li><%= link_to "Kontakta oss" %></li>
             <li>
@@ -28,7 +29,7 @@
               </form>
             </li>
             <% if current_user %>
-              <li>Inloggad som: <%= @current_user.name %><%= link_to "Logga ut", signout_path, method: "delete" %></li>
+              <li><%= link_to "Logga ut", signout_path, method: "delete" %></li>
             <% else %>
               <li class="pull-left"><%= link_to "Logga in", signin_path %></li>
             <% end %>

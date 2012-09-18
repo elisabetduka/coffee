@@ -17,3 +17,7 @@
 .really-pull-left {
   margin-left: 290px;
 }
+.wider a {
+  width: 200px;
+  display: inline;
+}
